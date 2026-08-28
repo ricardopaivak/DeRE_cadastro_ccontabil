@@ -523,13 +523,6 @@
     <!-- TAB: DeRE -->
     <div id="dere" class="content">
         <div class="form-section">
-            <div style="display: flex; gap: 12px; margin-bottom: 16px;">
-                <div class="checkbox-item">
-                    <input type="checkbox" id="conta-mista" onchange="toggleDesmembramentoTab()">
-                    <label for="conta-mista">Conta Contábil Mista</label>
-                </div>
-            </div>
-
             <div class="form-row">
                 <div style="grid-column: 1 / -1;">
                     <div class="form-group">
@@ -565,16 +558,69 @@
                 </div>
             </div>
 
-            <!-- Sub-aba Desmembramento (aparece quando Conta Contábil Mista é marcada) -->
-            <div id="desmembramentoSection" style="display: none; margin-top: 16px; border: 1px solid #999999; padding: 12px; background-color: #F5F5F5;">
-                <div style="font-weight: bold; margin-bottom: 12px; font-size: 12px; display: flex; justify-content: space-between; align-items: center;">
-                    <span>Desmembramento Conta Contábil Mista</span>
-                    <button onclick="adicionarDesmembramento()" style="background-color: #B0C4DE; border: 1px solid #999999; padding: 4px 12px; cursor: pointer; font-size: 11px;">+ Adicionar</button>
-                </div>
-                <div id="desmembramentoContainer">
-                    <!-- Desmembramentos serão adicionados aqui dinamicamente -->
-                </div>
+            <!-- Flag Possui Desmembramento -->
+            <div class="checkbox-item" style="margin-top: 16px; margin-bottom: 12px;">
+                <input type="checkbox" id="possui-desmembramento" onchange="toggleDesmembramentoVisibility()">
+                <label for="possui-desmembramento" style="font-weight: bold; font-size: 11px;">Possui Desmembramento</label>
             </div>
+
+            <!-- Título Desmembramento Conta Contábil Mista -->
+            <div style="margin-bottom: 8px;">
+                <span style="font-weight: bold; font-size: 12px; color: #000000;">Desmembramento Conta Contábil Mista</span>
+            </div>
+
+            <!-- Tabela tipo Excel -->
+            <table style="width: 100%; border-collapse: collapse; background-color: #FFFFFF;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Código de Desmembramento</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Descrição Desmembramento</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Cód. Trib</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Ind. Trib ISS</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data Início Vigência</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data Fim Vigência</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="number" min="0" max="999" style="width: 100%; border: none; padding: 0; font-size: 11px;" onchange="validarCodigoDesmembramento(this)"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
+                            <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
+                                <option>Selecione...</option>
+                            </select>
+                        </td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="checkbox" style="cursor: pointer;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="number" min="0" max="999" style="width: 100%; border: none; padding: 0; font-size: 11px;" onchange="validarCodigoDesmembramento(this)"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
+                            <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
+                                <option>Selecione...</option>
+                            </select>
+                        </td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="checkbox" style="cursor: pointer;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="number" min="0" max="999" style="width: 100%; border: none; padding: 0; font-size: 11px;" onchange="validarCodigoDesmembramento(this)"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
+                            <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
+                                <option>Selecione...</option>
+                            </select>
+                        </td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="checkbox" style="cursor: pointer;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
     </div>
 
@@ -852,8 +898,6 @@
     </div>
 
     <script>
-        let desmembramentoCount = 0;
-        const MAX_DESMEMBRAMENTOS = 999;
 
         function validarCodigoDesmembramento(id) {
             const input = document.getElementById('desm-campo1-' + id);
@@ -882,21 +926,129 @@
             }
         }
 
-        function validarDataTerminoDesmembramento(id) {
-            const dataInicio = document.getElementById('desm-data-inicio-' + id).value;
-            const dataTermino = document.getElementById('desm-data-termino-' + id).value;
 
-            if (dataInicio && dataTermino) {
-                const inicio = new Date(dataInicio);
-                const termino = new Date(dataTermino);
+        function toggleDesmembramentoVisibility() {
+            const checkbox = document.getElementById('possui-desmembramento');
+            const codigoTributacaoSelect = document.getElementById('codigo-trib');
+            const indTribIssCheckbox = document.getElementById('ind-trib-iss');
+            const desmembramentoTable = document.querySelector('table');
+            const tableInputs = desmembramentoTable.querySelectorAll('input, select');
+            
+            if (checkbox.checked) {
+                // Desabilitar campos superiores
+                codigoTributacaoSelect.disabled = true;
+                indTribIssCheckbox.disabled = true;
+                
+                // Habilitar tabela de desmembramento
+                desmembramentoTable.style.opacity = '1';
+                desmembramentoTable.style.pointerEvents = 'auto';
+                tableInputs.forEach(input => {
+                    input.disabled = false;
+                });
+            } else {
+                // Habilitar campos superiores
+                codigoTributacaoSelect.disabled = false;
+                indTribIssCheckbox.disabled = false;
+                
+                // Desabilitar tabela de desmembramento
+                desmembramentoTable.style.opacity = '0.5';
+                desmembramentoTable.style.pointerEvents = 'none';
+                tableInputs.forEach(input => {
+                    input.disabled = true;
+                });
+            }
+        }
 
-                if (termino < inicio) {
-                    alert('Data de Término de Vigência não pode ser menor que Data de Início de Vigência!');
-                    document.getElementById('desm-data-termino-' + id).value = '';
-                    document.getElementById('desm-data-termino-' + id).focus();
+        function validarCodigoDesmembramento(input) {
+            let valor = input.value.trim();
+            
+            // Converter número para string com 3 dígitos (001, 002, etc)
+            if (valor !== '') {
+                const numValue = parseInt(valor, 10);
+                if (isNaN(numValue) || numValue < 0 || numValue > 999) {
+                    alert('Código de Desmembramento deve ser um número entre 0 e 999!');
+                    input.value = '';
+                    input.focus();
+                    return;
+                }
+                // Formatar com 3 dígitos
+                input.value = String(numValue).padStart(3, '0');
+            }
+            
+            // Verificar duplicidade
+            const codigosExistentes = new Set();
+            const inputs = document.querySelectorAll('table input[type="number"]');
+            
+            inputs.forEach(inp => {
+                if (inp.value && inp !== input) {
+                    const codigo = String(parseInt(inp.value, 10)).padStart(3, '0');
+                    codigosExistentes.add(codigo);
+                }
+            });
+            
+            const codigoAtual = String(parseInt(input.value, 10)).padStart(3, '0');
+            if (codigosExistentes.has(codigoAtual) && input.value !== '') {
+                alert('Já existe um desmembramento com o código ' + codigoAtual + '!');
+                input.value = '';
+                input.focus();
+                return;
+            }
+            
+            // Verificar se é a última linha preenchida e criar nova linha
+            verificarECriarNovaLinha(input);
+        }
+
+        function verificarECriarNovaLinha(input) {
+            const table = document.querySelector('table tbody');
+            const rows = table.querySelectorAll('tr');
+            const ultimaLinha = rows[rows.length - 1];
+            
+            // Verificar se o input editado é da última linha
+            if (input.closest('tr') === ultimaLinha) {
+                // Verificar se a última linha tem conteúdo
+                const ultimoInput = ultimaLinha.querySelector('input[type="number"]');
+                if (ultimoInput.value !== '') {
+                    criarNovaLinhaVazia(table);
                 }
             }
         }
+
+        function criarNovaLinhaVazia(table) {
+            // Verificar se já existe linha vazia no final
+            const ultimaLinha = table.querySelector('tr:last-child');
+            const ultimoCodigoInput = ultimaLinha.querySelector('input[type="number"]');
+            
+            if (ultimoCodigoInput.value === '') {
+                return; // Já existe linha vazia
+            }
+            
+            // Criar nova linha
+            const novaLinha = document.createElement('tr');
+            novaLinha.innerHTML = `
+                <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="number" min="0" max="999" style="width: 100%; border: none; padding: 0; font-size: 11px;" onchange="validarCodigoDesmembramento(this)"></td>
+                <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
+                    <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
+                        <option>Selecione...</option>
+                    </select>
+                </td>
+                <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="checkbox" style="cursor: pointer;"></td>
+                <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+            `;
+            
+            table.appendChild(novaLinha);
+            
+            // Se tabela está desabilitada, desabilitar a nova linha também
+            const checkbox = document.getElementById('possui-desmembramento');
+            if (!checkbox.checked) {
+                const novoInputs = novaLinha.querySelectorAll('input, select');
+                novoInputs.forEach(inp => {
+                    inp.disabled = true;
+                });
+            }
+        }
+
 
         function switchTab(tabName) {
             // Hide all content
@@ -914,90 +1066,8 @@
             event.target.classList.add('active');
         }
 
-        function toggleDesmembramentoTab() {
-            const checkbox = document.getElementById('conta-mista');
-            const desmembramentoSection = document.getElementById('desmembramentoSection');
-            const codigoTributacaoRow = document.getElementById('codigoTributacaoRow');
-            const indTribIssRow = document.getElementById('indTribIssRow');
-            const container = document.getElementById('desmembramentoContainer');
-            
-            if (checkbox.checked) {
-                desmembramentoSection.style.display = 'block';
-                codigoTributacaoRow.style.display = 'none';
-                indTribIssRow.style.display = 'none';
-                // Se for a primeira vez, adiciona 2 desmembramentos
-                if (desmembramentoCount === 0) {
-                    adicionarDesmembramento();
-                    adicionarDesmembramento();
-                }
-            } else {
-                desmembramentoSection.style.display = 'none';
-                codigoTributacaoRow.style.display = 'flex';
-                indTribIssRow.style.display = 'flex';
-            }
-        }
 
-        function adicionarDesmembramento() {
-            if (desmembramentoCount >= MAX_DESMEMBRAMENTOS) {
-                alert('Limite máximo de 999 desmembramentos atingido!');
-                return;
-            }
 
-            const container = document.getElementById('desmembramentoContainer');
-            desmembramentoCount++;
-
-            const desmembramentoDiv = document.createElement('div');
-            desmembramentoDiv.id = 'desmembramento-' + desmembramentoCount;
-            desmembramentoDiv.style.cssText = 'margin-bottom: 12px; padding: 12px; background-color: #FFFFFF; border: 1px solid #CCCCCC;';
-
-            desmembramentoDiv.innerHTML = `
-                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px;">
-                    <span style="font-weight: bold; font-size: 11px;">Desmembramento ${desmembramentoCount}</span>
-                    <button onclick="removerDesmembramento(${desmembramentoCount})" style="background-color: #FF6B6B; border: 1px solid #999999; padding: 3px 8px; cursor: pointer; font-size: 10px; color: white;">Remover</button>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="desm-campo1-${desmembramentoCount}">Código de Desmembramento</label>
-                        <input type="text" id="desm-campo1-${desmembramentoCount}" style="width: 100%;" onchange="validarCodigoDesmembramento(${desmembramentoCount})">
-                    </div>
-                    <div class="form-group">
-                        <label for="desm-descricao-${desmembramentoCount}">Descrição</label>
-                        <input type="text" id="desm-descricao-${desmembramentoCount}" style="width: 100%;">
-                    </div>
-                </div>
-                <div style="display: flex; gap: 16px; align-items: flex-end;">
-                    <div class="form-group" style="flex: 1;">
-                        <label for="desm-campo2-${desmembramentoCount}">Cód. Trib</label>
-                        <select id="desm-campo2-${desmembramentoCount}" style="width: 100%;">
-                            <option>Selecione...</option>
-                        </select>
-                    </div>
-                    <div class="checkbox-item" style="margin-bottom: 0;">
-                        <input type="checkbox" id="desm-ind-trib-iss-${desmembramentoCount}">
-                        <label for="desm-ind-trib-iss-${desmembramentoCount}">Ind. Trib ISS</label>
-                    </div>
-                </div>
-                <div class="form-row" style="margin-top: 12px;">
-                    <div class="form-group">
-                        <label for="desm-data-inicio-${desmembramentoCount}">Data de Início de Vigência</label>
-                        <input type="date" id="desm-data-inicio-${desmembramentoCount}" style="width: 100%;">
-                    </div>
-                    <div class="form-group">
-                        <label for="desm-data-termino-${desmembramentoCount}">Data de Término de Vigência</label>
-                        <input type="date" id="desm-data-termino-${desmembramentoCount}" style="width: 100%;" onchange="validarDataTerminoDesmembramento(${desmembramentoCount})">
-                    </div>
-                </div>
-            `;
-
-            container.appendChild(desmembramentoDiv);
-        }
-
-        function removerDesmembramento(id) {
-            const element = document.getElementById('desmembramento-' + id);
-            if (element) {
-                element.remove();
-            }
-        }
 
         function handlePlanoDeRE(select) {
             const valor = select.value;
