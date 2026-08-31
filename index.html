@@ -523,40 +523,67 @@
     <!-- TAB: DeRE -->
     <div id="dere" class="content">
         <div class="form-section">
-            <div class="form-row">
-                <div style="grid-column: 1 / -1;">
-                    <div class="form-group">
-                        <label for="conta-ref">Conta Referencial (Buscará do Cadastro da Empresa)</label>
-                        <select id="conta-ref" style="width: 100%;">
-                            <option>Selecione...</option>
-                        </select>
-                    </div>
-                </div>
+
+            <!-- Grid de Informações de Conta Referencial -->
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; background-color: #FFFFFF;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Conta Referencial</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Código de Tributação</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Ind. Trib ISS</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data Início Vigência</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data Fim Vigência</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
+                            <select id="conta-ref" style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
+                                <option>Selecione...</option>
+                            </select>
+                        </td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
+                            <select id="codigo-trib" style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
+                                <option>Selecione...</option>
+                            </select>
+                        </td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px; text-align: center;">
+                            <input type="checkbox" id="ind-trib-iss" style="cursor: pointer;">
+                        </td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
+                            <input type="date" id="data-inicio-vigencia" style="width: 100%; border: none; padding: 0; font-size: 11px;">
+                        </td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
+                            <input type="date" id="data-termino-vigencia" style="width: 100%; border: none; padding: 0; font-size: 11px;" onchange="validarDataTermino()">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <!-- Título Histórico de Alteração - Conta Referencial DeRE -->
+            <div style="margin-top: 16px; margin-bottom: 8px;">
+                <span style="font-weight: bold; font-size: 12px; color: #000000;">Histórico de Alteração - Conta Referencial DeRE</span>
             </div>
 
-            <div style="display: flex; gap: 16px; align-items: flex-end; margin-bottom: 12px;" id="codigoTributacaoRow">
-                <div class="form-group" style="flex: 1;">
-                    <label for="codigo-trib">Código de Tributação (Carregado conforme o plano de contas selecionado)</label>
-                    <select id="codigo-trib" style="width: 100%;">
-                        <option>Selecione...</option>
-                    </select>
-                </div>
-                <div class="checkbox-item" id="indTribIssRow" style="margin-bottom: 0;">
-                    <input type="checkbox" id="ind-trib-iss">
-                    <label for="ind-trib-iss">Ind. Trib ISS</label>
-                </div>
-            </div>
-
-            <div class="form-row">
-                <div class="form-group">
-                    <label for="data-inicio-vigencia">Data de Início de Vigência</label>
-                    <input type="date" id="data-inicio-vigencia" style="width: 100%;">
-                </div>
-                <div class="form-group">
-                    <label for="data-termino-vigencia">Data de Término de Vigência</label>
-                    <input type="date" id="data-termino-vigencia" style="width: 100%;" onchange="validarDataTermino()">
-                </div>
-            </div>
+            <!-- Grid Histórico de Alteração - Conta Referencial DeRE -->
+            <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; background-color: #FFFFFF;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Campo</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Informação Anterior</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Informação Atual</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data da Alteração</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                    </tr>
+                </tbody>
+            </table>
 
             <!-- Flag Possui Desmembramento -->
             <div class="checkbox-item" style="margin-top: 16px; margin-bottom: 12px;">
@@ -570,11 +597,12 @@
             </div>
 
             <!-- Tabela tipo Excel -->
-            <table style="width: 100%; border-collapse: collapse; background-color: #FFFFFF;">
+            <table id="tabelaDesmembramento" style="width: 100%; border-collapse: collapse; background-color: #FFFFFF; opacity: 0.5; pointer-events: none;">
                 <thead>
                     <tr>
                         <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Código de Desmembramento</th>
                         <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Descrição Desmembramento</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Atividade</th>
                         <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Cód. Trib</th>
                         <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Ind. Trib ISS</th>
                         <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data Início Vigência</th>
@@ -585,6 +613,11 @@
                     <tr>
                         <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="number" min="0" max="999" style="width: 100%; border: none; padding: 0; font-size: 11px;" onchange="validarCodigoDesmembramento(this)"></td>
                         <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
+                            <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
+                                <option>Selecione...</option>
+                            </select>
+                        </td>
                         <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
                             <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
                                 <option>Selecione...</option>
@@ -621,8 +654,32 @@
                 </tbody>
             </table>
 
+            <!-- Título Histórico de Alteração - Contas Desmembradas -->
+            <div style="margin-top: 16px; margin-bottom: 8px;">
+                <span style="font-weight: bold; font-size: 12px; color: #000000;">Histórico de Alteração - Contas Desmembradas</span>
+            </div>
+
+            <!-- Grid Histórico de Alteração -->
+            <table id="tabelaHistoricoDesmembramento" style="width: 100%; border-collapse: collapse; margin-bottom: 12px; background-color: #FFFFFF; opacity: 0.5; pointer-events: none;">
+                <thead>
+                    <tr>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Campo</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Informação Anterior</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Informação Atual</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data da Alteração</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
+                    </tr>
+                </tbody>
+            </table>
+
         </div>
-    </div>
 
     <!-- MODAL: Associar Plano de Contas -->
     <div id="associarModal" class="modal">
@@ -931,8 +988,10 @@
             const checkbox = document.getElementById('possui-desmembramento');
             const codigoTributacaoSelect = document.getElementById('codigo-trib');
             const indTribIssCheckbox = document.getElementById('ind-trib-iss');
-            const desmembramentoTable = document.querySelector('table');
+            const desmembramentoTable = document.getElementById('tabelaDesmembramento');
+            const historicoTable = document.getElementById('tabelaHistoricoDesmembramento');
             const tableInputs = desmembramentoTable.querySelectorAll('input, select');
+            const historicoInputs = historicoTable.querySelectorAll('input, select');
             
             if (checkbox.checked) {
                 // Desabilitar campos superiores
@@ -945,6 +1004,13 @@
                 tableInputs.forEach(input => {
                     input.disabled = false;
                 });
+                
+                // Habilitar tabela de histórico
+                historicoTable.style.opacity = '1';
+                historicoTable.style.pointerEvents = 'auto';
+                historicoInputs.forEach(input => {
+                    input.disabled = false;
+                });
             } else {
                 // Habilitar campos superiores
                 codigoTributacaoSelect.disabled = false;
@@ -954,6 +1020,13 @@
                 desmembramentoTable.style.opacity = '0.5';
                 desmembramentoTable.style.pointerEvents = 'none';
                 tableInputs.forEach(input => {
+                    input.disabled = true;
+                });
+                
+                // Desabilitar tabela de histórico
+                historicoTable.style.opacity = '0.5';
+                historicoTable.style.pointerEvents = 'none';
+                historicoInputs.forEach(input => {
                     input.disabled = true;
                 });
             }
@@ -1032,6 +1105,11 @@
                         <option>Selecione...</option>
                     </select>
                 </td>
+                <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
+                    <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
+                        <option>Selecione...</option>
+                    </select>
+                </td>
                 <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="checkbox" style="cursor: pointer;"></td>
                 <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
                 <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
@@ -1089,6 +1167,17 @@
             alert('Associação processada com sucesso!');
             closeModal('associarModal');
         }
+
+        // Inicializar estado dos grids ao carregar a página
+        function inicializarEstadoDesmembramento() {
+            const checkbox = document.getElementById('possui-desmembramento');
+            if (!checkbox.checked) {
+                toggleDesmembramentoVisibility();
+            }
+        }
+
+        // Chamar inicialização ao carregar a página
+        window.addEventListener('DOMContentLoaded', inicializarEstadoDesmembramento);
     </script>
 </body>
 </html>
