@@ -108,6 +108,8 @@
             background-color: #E8E8E8;
             padding: 12px;
             display: none;
+            max-height: calc(33.33vh - 50px);
+            overflow-y: auto;
         }
 
         .content.active {
@@ -414,6 +416,156 @@
         </div>
     </div>
 
+    <!-- SEÇÃO FIXA: INFORMAÇÕES DO PLANO DE CONTAS -->
+    <div style="background-color: #FFFFFF; border-bottom: 1px solid #999999; padding: 0; font-size: 11px; max-height: calc(75vh - 100px); overflow-y: auto;">
+        <table style="width: 100%; border-collapse: collapse;">
+            <thead style="position: sticky; top: 0; background-color: #D3D3D3; z-index: 10;">
+                <tr style="border-bottom: 1px solid #999999;">
+                    <th style="border-right: 1px solid #999999; padding: 6px 8px; text-align: left; font-weight: bold; font-size: 11px;">Código Reduzido</th>
+                    <th style="border-right: 1px solid #999999; padding: 6px 8px; text-align: left; font-weight: bold; font-size: 11px;">Conta</th>
+                    <th style="border-right: 1px solid #999999; padding: 6px 8px; text-align: left; font-weight: bold; font-size: 11px;">Descrição</th>
+                    <th style="border-right: 1px solid #999999; padding: 6px 8px; text-align: left; font-weight: bold; font-size: 11px;">Natureza</th>
+                    <th style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-weight: bold; font-size: 11px;">Analítica</th>
+                    <th style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-weight: bold; font-size: 11px;">Rest. Aparecimento</th>
+                    <th style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-weight: bold; font-size: 11px;">Restringir</th>
+                    <th style="padding: 6px 8px; text-align: left; font-weight: bold; font-size: 11px;">Conta R</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="border-bottom: 1px solid #999999; background-color: #F0F0F0;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">00001</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">ATIVO</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;"></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">00002</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">CIRCULANTE</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;"></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">00003</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1.1</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DISPONÍVEL</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;"></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">10000</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1.1.01</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">CAIXA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;">1.01.01.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">10101</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1.1.01.001</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">Caixa</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☑</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;">1.01.01.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">10200</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1.1.02</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">BANCOS CONTA MOVIMENTO</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;"></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">10201</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1.1.02.001</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">Banco do Brasil S.A.</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☑</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;">1.01.01.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">10202</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1.1.02.002</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">Caixa Econômica Federal</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☑</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;">1.01.01.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">10203</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1.1.02.003</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">Banco Itaú S.A.</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☑</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;">1.01.01.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">10204</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1.1.02.004</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">Banco Bradesco S.A.</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☑</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;">1.01.01.0</td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">11200</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1.2</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">REALIZÁVEL A CURTO PRAZO</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;"></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">70000</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1.2.01</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">CLIENTES - Direitos e Créditos</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;"></td>
+                </tr>
+                <tr style="border-bottom: 1px solid #999999;">
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">70001</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">1.1.2.01.001</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">Clientes Diversos - Duplicatas a Receber</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; font-size: 11px;">DEVEDORA</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☑</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="border-right: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;">☐</td>
+                    <td style="padding: 6px 8px; font-size: 11px;">1.01.01.0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
     <!-- TABS -->
     <div class="tabs">
         <div class="tab active" onclick="switchTab('principal')">Principal</div>
@@ -436,10 +588,10 @@
                 </div>
             </div>
 
-            <!-- Segunda linha: Descrição Ativo + Desc. Reduzida + Ativo -->
+            <!-- Segunda linha: Descrição + Desc. Reduzida + Ativo -->
             <div style="display: grid; grid-template-columns: 1.5fr 1fr 0.5fr; gap: 12px; margin-bottom: 12px;">
                 <div class="form-group">
-                    <label for="desc-ativo">Descrição Ativo</label>
+                    <label for="desc-ativo">Descrição</label>
                     <input type="text" id="desc-ativo" style="width: 100%;">
                 </div>
                 <div class="form-group">
@@ -524,15 +676,6 @@
     <div id="dere" class="content">
         <div class="form-section">
 
-            <!-- Campo Descrição Detalhada -->
-            <div class="form-group" style="margin-bottom: 16px;">
-                <label for="descricao-detalhada" style="font-weight: bold; font-size: 11px;">Descrição Detalhada (Até 600 caracteres)</label>
-                <textarea id="descricao-detalhada" style="width: 100%; height: 80px; padding: 8px; font-size: 11px; border: 1px solid #999999; font-family: Arial, sans-serif; resize: none; box-sizing: border-box;" maxlength="600" placeholder="Digite uma descrição detalhada sobre a conta contábil..."></textarea>
-                <div style="font-size: 10px; color: #666666; text-align: right; margin-top: 4px;">
-                    <span id="contador-caracteres">0</span> / 600 caracteres
-                </div>
-            </div>
-
             <!-- Grid de Informações de Conta Referencial -->
             <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; background-color: #FFFFFF;">
                 <thead>
@@ -542,6 +685,7 @@
                         <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Ind. Trib ISS</th>
                         <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data Início Vigência</th>
                         <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data Fim Vigência</th>
+                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: center; font-size: 11px;">Histórico Alteração</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -565,137 +709,43 @@
                         <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
                             <input type="date" id="data-termino-vigencia" style="width: 100%; border: none; padding: 0; font-size: 11px;" onchange="validarDataTermino()">
                         </td>
+                        <td style="border: 1px solid #999999; padding: 8px; text-align: center; font-size: 11px;">
+                            <button type="button" style="background-color: #CCCCCC; border: 1px solid #999999; padding: 4px 8px; font-size: 10px; cursor: pointer; border-radius: 2px;" onclick="abrirHistoricoAlteracao()">Abrir</button>
+                        </td>
                     </tr>
                 </tbody>
             </table>
 
-            <!-- Título Histórico de Alteração - Conta Referencial DeRE -->
-            <div style="margin-top: 16px; margin-bottom: 8px;">
-                <span style="font-weight: bold; font-size: 12px; color: #000000;">Histórico de Alteração - Conta Referencial DeRE</span>
+            <!-- Seção: Descrição Detalhada + Flag Possui Desmembramento -->
+            <div style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 16px;">
+                
+                <!-- Campo Descrição Detalhada -->
+                <div class="form-group" style="flex: 0 0 75%;">
+                <label for="descricao-detalhada" style="font-weight: bold; font-size: 11px;">Descrição Detalhada (Até 600 caracteres)</label>
+                <textarea id="descricao-detalhada" style="width: 100%; height: 80px; padding: 8px; font-size: 11px; border: 1px solid #999999; font-family: Arial, sans-serif; resize: none; box-sizing: border-box;" maxlength="600" placeholder="Digite uma descrição detalhada sobre a conta contábil..."></textarea>
+                <div style="font-size: 10px; color: #666666; text-align: right; margin-top: 4px;">
+                    <span id="contador-caracteres">0</span> / 600 caracteres
+                </div>
             </div>
 
-            <!-- Grid Histórico de Alteração - Conta Referencial DeRE -->
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; background-color: #FFFFFF;">
-                <thead>
-                    <tr>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Campo</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Informação Anterior</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Informação Atual</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data da Alteração</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                    </tr>
-                </tbody>
+                <!-- Flag Possui Desmembramento -->
+                <div style="flex: 0 0 25%; padding-top: 20px;">
+                    <div style="margin-bottom: 12px;">
+                        <input type="checkbox" id="possui-desmembramento" onchange="toggleDesmembramentoVisibility()">
+                        <label for="possui-desmembramento" style="font-weight: bold; font-size: 11px;">Possui Desmembramento</label>
+                    </div>
+                    <button id="btnAbrirDesmembramento" type="button" style="background-color: #CCCCCC; border: 1px solid #999999; padding: 6px 12px; font-size: 11px; cursor: not-allowed; border-radius: 3px; opacity: 0.5;" disabled>Abrir Desmembramento</button>
+                </div>
+
+            </div>
+
+            <!-- Tabelas ocultas para referenciar na função abrirTelaDesmembramento -->
+            <table id="tabelaDesmembramento" style="display: none;">
+                <tbody></tbody>
             </table>
-
-            <!-- Flag Possui Desmembramento -->
-            <div class="checkbox-item" style="margin-top: 16px; margin-bottom: 12px;">
-                <input type="checkbox" id="possui-desmembramento" onchange="toggleDesmembramentoVisibility()">
-                <label for="possui-desmembramento" style="font-weight: bold; font-size: 11px;">Possui Desmembramento</label>
-            </div>
-
-            <!-- Título Desmembramento Conta Contábil Mista -->
-            <div id="tituloDesmembramento" style="margin-bottom: 8px; opacity: 0.5;">
-                <span style="font-weight: bold; font-size: 12px; color: #000000;">Desmembramento Conta Contábil Mista</span>
-            </div>
-
-            <!-- Tabela tipo Excel -->
-            <table id="tabelaDesmembramento" style="width: 100%; border-collapse: collapse; background-color: #FFFFFF; opacity: 0.5; pointer-events: none;">
-                <thead>
-                    <tr>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Código de Desmembramento</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Descrição Desmembramento</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Atividade</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Cód. Trib</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Ind. Trib ISS</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data Início Vigência</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data Fim Vigência</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="number" min="0" max="999" style="width: 100%; border: none; padding: 0; font-size: 11px;" onchange="validarCodigoDesmembramento(this)"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
-                            <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
-                                <option>Selecione...</option>
-                            </select>
-                        </td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
-                            <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
-                                <option>Selecione...</option>
-                            </select>
-                        </td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="checkbox" style="cursor: pointer;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="number" min="0" max="999" style="width: 100%; border: none; padding: 0; font-size: 11px;" onchange="validarCodigoDesmembramento(this)"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
-                            <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
-                                <option>Selecione...</option>
-                            </select>
-                        </td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
-                            <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
-                                <option>Selecione...</option>
-                            </select>
-                        </td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="checkbox" style="cursor: pointer;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                    </tr>
-                    <tr>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="number" min="0" max="999" style="width: 100%; border: none; padding: 0; font-size: 11px;" onchange="validarCodigoDesmembramento(this)"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
-                            <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
-                                <option>Selecione...</option>
-                            </select>
-                        </td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
-                            <select style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
-                                <option>Selecione...</option>
-                            </select>
-                        </td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="checkbox" style="cursor: pointer;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                    </tr>
-                </tbody>
-            </table>
-
-            <!-- Título Histórico de Alteração - Contas Desmembradas -->
-            <div style="margin-top: 16px; margin-bottom: 8px;">
-                <span style="font-weight: bold; font-size: 12px; color: #000000;">Histórico de Alteração - Contas Desmembradas</span>
-            </div>
-
-            <!-- Grid Histórico de Alteração -->
-            <table id="tabelaHistoricoDesmembramento" style="width: 100%; border-collapse: collapse; margin-bottom: 12px; background-color: #FFFFFF; opacity: 0.5; pointer-events: none;">
-                <thead>
-                    <tr>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Campo</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Informação Anterior</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Informação Atual</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data da Alteração</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="text" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0; font-size: 11px;"></td>
-                    </tr>
-                </tbody>
+            
+            <table id="tabelaHistoricoDesmembramento" style="display: none;">
+                <tbody></tbody>
             </table>
 
         </div>
@@ -704,7 +754,7 @@
     <div id="associarModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
-                <span>Associar Plano de Contas Referencial ECD/ECF a partir de 2014</span>
+                <span>Associar Plano de Contas Referencial DeRE</span>
                 <button class="modal-close" onclick="closeModal('associarModal')">&times;</button>
             </div>
 
@@ -727,6 +777,9 @@
                             <th style="flex: 1;">Descrição</th>
                             <th>Conta Ref DeRE (COSIF/ANS/SUSEP)</th>
                             <th>Código de Tributação</th>
+                            <th>Ind. Trib ISS</th>
+                            <th>Data Início Vigência</th>
+                            <th>Data Fim Vigência</th>
                         </tr>
                     </thead>
                     <tbody id="tableBody">
@@ -734,6 +787,8 @@
                             <td>00001</td>
                             <td>1</td>
                             <td>Ativo</td>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -745,11 +800,15 @@
                             <td></td>
                             <td></td>
                             <td></td>
+                            <td></td>
+                            <td></td>
                         </tr>
                         <tr>
                             <td>00003</td>
                             <td>1.1.1</td>
                             <td>Disponibilidades</td>
+                            <td></td>
+                            <td></td>
                             <td></td>
                             <td></td>
                             <td></td>
@@ -1007,54 +1066,29 @@
             const checkbox = document.getElementById('possui-desmembramento');
             const codigoTributacaoSelect = document.getElementById('codigo-trib');
             const indTribIssCheckbox = document.getElementById('ind-trib-iss');
-            const desmembramentoTable = document.getElementById('tabelaDesmembramento');
-            const historicoTable = document.getElementById('tabelaHistoricoDesmembramento');
-            const tituloDesmembramento = document.getElementById('tituloDesmembramento');
-            const tableInputs = desmembramentoTable.querySelectorAll('input, select');
-            const historicoInputs = historicoTable.querySelectorAll('input, select');
+            const btnAbrirDesmembramento = document.getElementById('btnAbrirDesmembramento');
             
             if (checkbox.checked) {
                 // Desabilitar campos superiores
                 codigoTributacaoSelect.disabled = true;
                 indTribIssCheckbox.disabled = true;
                 
-                // Habilitar tabela de desmembramento
-                desmembramentoTable.style.opacity = '1';
-                desmembramentoTable.style.pointerEvents = 'auto';
-                tableInputs.forEach(input => {
-                    input.disabled = false;
-                });
-                
-                // Habilitar título
-                tituloDesmembramento.style.opacity = '1';
-                
-                // Habilitar tabela de histórico
-                historicoTable.style.opacity = '1';
-                historicoTable.style.pointerEvents = 'auto';
-                historicoInputs.forEach(input => {
-                    input.disabled = false;
-                });
+                // Habilitar botão Abrir Desmembramento
+                btnAbrirDesmembramento.disabled = false;
+                btnAbrirDesmembramento.style.opacity = '1';
+                btnAbrirDesmembramento.style.cursor = 'pointer';
+                btnAbrirDesmembramento.removeEventListener('click', abrirTelaDesmembramento);
+                btnAbrirDesmembramento.addEventListener('click', abrirTelaDesmembramento);
             } else {
                 // Habilitar campos superiores
                 codigoTributacaoSelect.disabled = false;
                 indTribIssCheckbox.disabled = false;
                 
-                // Desabilitar tabela de desmembramento
-                desmembramentoTable.style.opacity = '0.5';
-                desmembramentoTable.style.pointerEvents = 'none';
-                tableInputs.forEach(input => {
-                    input.disabled = true;
-                });
-                
-                // Desabilitar título
-                tituloDesmembramento.style.opacity = '0.5';
-                
-                // Desabilitar tabela de histórico
-                historicoTable.style.opacity = '0.5';
-                historicoTable.style.pointerEvents = 'none';
-                historicoInputs.forEach(input => {
-                    input.disabled = true;
-                });
+                // Desabilitar botão Abrir Desmembramento
+                btnAbrirDesmembramento.disabled = true;
+                btnAbrirDesmembramento.style.opacity = '0.5';
+                btnAbrirDesmembramento.style.cursor = 'not-allowed';
+                btnAbrirDesmembramento.removeEventListener('click', abrirTelaDesmembramento);
             }
         }
 
@@ -1194,6 +1228,364 @@
             closeModal('associarModal');
         }
 
+        // Abrir tela de desmembramento em branco
+        // Abrir tela de histórico de alteração de conta referencial
+        function abrirHistoricoAlteracao() {
+            // Obter valores da linha de conta referencial
+            const contaRef = document.getElementById('conta-ref').value || 'Não preenchido';
+            const codigoTrib = document.getElementById('codigo-trib').value || 'Não preenchido';
+            const indTribIss = document.getElementById('ind-trib-iss').checked ? 'Sim' : 'Não';
+            const dataInicio = document.getElementById('data-inicio-vigencia').value || 'Não preenchido';
+            const dataFim = document.getElementById('data-termino-vigencia').value || 'Não preenchido';
+            
+            const htmlConteudo = `
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Alteração - Conta Referencial</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            background-color: #E8E8E8;
+            color: #000000;
+        }
+        .header {
+            background-color: #4A4A4A;
+            color: #FFFFFF;
+            padding: 8px 12px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .content {
+            background-color: #FFFFFF;
+            margin: 12px;
+            padding: 12px;
+            border: 1px solid #999999;
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 16px;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 12px;
+            background-color: #FFFFFF;
+        }
+        th {
+            border: 1px solid #999999;
+            padding: 6px 8px;
+            background-color: #D3D3D3;
+            font-weight: bold;
+            text-align: left;
+            font-size: 11px;
+        }
+        td {
+            border: 1px solid #999999;
+            padding: 6px 8px;
+            font-size: 11px;
+        }
+        .button-group {
+            margin-top: 16px;
+            display: flex;
+            gap: 8px;
+        }
+        button {
+            background-color: #CCCCCC;
+            border: 1px solid #999999;
+            padding: 6px 12px;
+            font-size: 11px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background-color: #BBBBBB;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Histórico de Alteração - Conta Referencial
+    </div>
+    <div class="content">
+        <div class="section-title">Histórico de Alterações</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Conta Referencial</th>
+                    <th>Código de Tributação</th>
+                    <th>Ind. Trib ISS</th>
+                    <th>Data Início Vigência</th>
+                    <th>Data Fim Vigência</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>${contaRef}</td>
+                    <td>${codigoTrib}</td>
+                    <td>${indTribIss}</td>
+                    <td>${dataInicio}</td>
+                    <td>${dataFim}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="button-group">
+            <button onclick="window.print()">Imprimir</button>
+            <button onclick="window.close()">Fechar</button>
+        </div>
+    </div>
+</body>
+</html>
+            `;
+            
+            const novaJanela = window.open();
+            if (novaJanela) {
+                novaJanela.document.write(htmlConteudo);
+                novaJanela.document.close();
+            } else {
+                alert('Popup foi bloqueado. Permita popups para este site.');
+            }
+        }
+
+        function abrirTelaDesmembramento() {
+            console.log('Abrindo tela de desmembramento com dados');
+            
+            // Obter dados da tabela de desmembramento
+            const tabelaDesmembramento = document.getElementById('tabelaDesmembramento');
+            const linhasDesmembramento = tabelaDesmembramento.querySelectorAll('tbody tr');
+            let tabelaDesmembramentoHTML = '';
+            
+            linhasDesmembramento.forEach((linha, index) => {
+                const cells = linha.querySelectorAll('td');
+                tabelaDesmembramentoHTML += `
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="number" value="${cells[0].querySelector('input')?.value || ''}" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="text" value="${cells[1].querySelector('input')?.value || ''}" maxlength="600" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>${cells[2].querySelector('select')?.value || 'Selecione...'}</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>${cells[3].querySelector('select')?.value || 'Selecione...'}</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;"><input type="checkbox" ${cells[4].querySelector('input')?.checked ? 'checked' : ''}></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" value="${cells[5].querySelector('input')?.value || ''}" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" value="${cells[6].querySelector('input')?.value || ''}" style="width: 100%; border: none; padding: 0;"></td>
+                    </tr>
+                `;
+            });
+            
+            // Adicionar duas linhas vazias ao desmembramento
+            tabelaDesmembramentoHTML += `
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="number" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="text" maxlength="600" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>Selecione...</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>Selecione...</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;"><input type="checkbox"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="number" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="text" maxlength="600" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>Selecione...</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>Selecione...</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;"><input type="checkbox"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0;"></td>
+                    </tr>
+            `;
+            
+            // Obter dados do histórico
+            const tabelaHistorico = document.getElementById('tabelaHistoricoDesmembramento');
+            const linhasHistorico = tabelaHistorico.querySelectorAll('tbody tr');
+            let tabelaHistoricoHTML = '';
+            
+            linhasHistorico.forEach((linha, index) => {
+                const cells = linha.querySelectorAll('td');
+                tabelaHistoricoHTML += `
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="number" value="${cells[0].querySelector('input')?.value || ''}" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="text" value="${cells[1].querySelector('input')?.value || ''}" maxlength="600" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>${cells[2].querySelector('select')?.value || 'Selecione...'}</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>${cells[3].querySelector('select')?.value || 'Selecione...'}</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;"><input type="checkbox" ${cells[4].querySelector('input')?.checked ? 'checked' : ''}></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" value="${cells[5].querySelector('input')?.value || ''}" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" value="${cells[6].querySelector('input')?.value || ''}" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0;"></td>
+                    </tr>
+                `;
+            });
+            
+            // Adicionar duas linhas vazias ao histórico
+            tabelaHistoricoHTML += `
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="number" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="text" maxlength="600" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>Selecione...</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>Selecione...</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;"><input type="checkbox"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0;"></td>
+                    </tr>
+                    <tr>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="number" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="text" maxlength="600" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>Selecione...</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><select style="width: 100%; border: none; padding: 0;"><option>Selecione...</option></select></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; text-align: center; font-size: 11px;"><input type="checkbox"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0;"></td>
+                        <td style="border: 1px solid #999999; padding: 6px 8px; font-size: 11px;"><input type="date" style="width: 100%; border: none; padding: 0;"></td>
+                    </tr>
+            `;
+            
+            const htmlConteudo = `
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desmembramento de Contas Contábeis</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            font-size: 11px;
+            background-color: #E8E8E8;
+            color: #000000;
+        }
+        .header {
+            background-color: #4A4A4A;
+            color: #FFFFFF;
+            padding: 8px 12px;
+            font-weight: bold;
+            font-size: 12px;
+        }
+        .content {
+            background-color: #FFFFFF;
+            margin: 12px;
+            padding: 12px;
+            border: 1px solid #999999;
+        }
+        .section-title {
+            font-weight: bold;
+            font-size: 12px;
+            margin-top: 16px;
+            margin-bottom: 8px;
+            color: #000000;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 12px;
+            background-color: #FFFFFF;
+        }
+        th {
+            border: 1px solid #999999;
+            padding: 6px 8px;
+            background-color: #D3D3D3;
+            font-weight: bold;
+            text-align: left;
+            font-size: 11px;
+        }
+        td {
+            border: 1px solid #999999;
+            padding: 6px 8px;
+            font-size: 11px;
+        }
+        .button-group {
+            margin-top: 16px;
+            display: flex;
+            gap: 8px;
+        }
+        button {
+            background-color: #CCCCCC;
+            border: 1px solid #999999;
+            padding: 6px 12px;
+            font-size: 11px;
+            cursor: pointer;
+            border-radius: 3px;
+        }
+        button:hover {
+            background-color: #BBBBBB;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Desmembramento de Contas Contábeis
+    </div>
+    <div class="content">
+        <div class="section-title">Desmembramento Conta Contábil Mista - Dados Atuais</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código Desmembramento</th>
+                    <th>Descrição Detalhada</th>
+                    <th>Atividade</th>
+                    <th>Cód. Trib</th>
+                    <th>Ind. Trib ISS</th>
+                    <th>Data Início Vigência</th>
+                    <th>Data Fim Vigência</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${tabelaDesmembramentoHTML}
+            </tbody>
+        </table>
+
+        <div class="section-title">Histórico de Alteração - Contas Desmembradas</div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código Desmembramento</th>
+                    <th>Descrição Detalhada</th>
+                    <th>Atividade</th>
+                    <th>Cód. Trib</th>
+                    <th>Ind. Trib ISS</th>
+                    <th>Data Início Vigência</th>
+                    <th>Data Fim Vigência</th>
+                    <th>Data da Alteração</th>
+                </tr>
+            </thead>
+            <tbody>
+                ${tabelaHistoricoHTML}
+            </tbody>
+        </table>
+
+        <div class="button-group">
+            <button onclick="window.print()">Imprimir</button>
+            <button onclick="window.close()">Fechar</button>
+        </div>
+    </div>
+</body>
+</html>
+            `;
+            
+            const novaJanela = window.open();
+            if (novaJanela) {
+                novaJanela.document.write(htmlConteudo);
+                novaJanela.document.close();
+            } else {
+                alert('Popup foi bloqueado. Permita popups para este site.');
+            }
+        }
+
+        // Inicializar estado dos grids
         // Inicializar estado dos grids ao carregar a página
         function inicializarEstadoDesmembramento() {
             const checkbox = document.getElementById('possui-desmembramento');
