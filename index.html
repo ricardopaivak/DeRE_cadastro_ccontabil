@@ -676,45 +676,45 @@
     <div id="dere" class="content">
         <div class="form-section">
 
-            <!-- Grid de Informações de Conta Referencial -->
-            <table style="width: 100%; border-collapse: collapse; margin-bottom: 12px; background-color: #FFFFFF;">
-                <thead>
-                    <tr>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Conta Referencial</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Código de Tributação</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Ind. Trib ISS</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data Início Vigência</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: left; font-size: 11px;">Data Fim Vigência</th>
-                        <th style="border: 1px solid #999999; padding: 8px; background-color: #D3D3D3; font-weight: bold; text-align: center; font-size: 11px;">Histórico Alteração</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
-                            <select id="conta-ref" style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
-                                <option>Selecione...</option>
-                            </select>
-                        </td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
-                            <select id="codigo-trib" style="width: 100%; border: none; padding: 0; font-size: 11px; background-color: #FFFFFF;">
-                                <option>Selecione...</option>
-                            </select>
-                        </td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px; text-align: center;">
-                            <input type="checkbox" id="ind-trib-iss" style="cursor: pointer;">
-                        </td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
-                            <input type="date" id="data-inicio-vigencia" style="width: 100%; border: none; padding: 0; font-size: 11px;">
-                        </td>
-                        <td style="border: 1px solid #999999; padding: 8px; font-size: 11px;">
-                            <input type="date" id="data-termino-vigencia" style="width: 100%; border: none; padding: 0; font-size: 11px;" onchange="validarDataTermino()">
-                        </td>
-                        <td style="border: 1px solid #999999; padding: 8px; text-align: center; font-size: 11px;">
-                            <button type="button" style="background-color: #CCCCCC; border: 1px solid #999999; padding: 4px 8px; font-size: 10px; cursor: pointer; border-radius: 2px;" onclick="abrirHistoricoAlteracao()">...</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <!-- Seção: Informações de Conta Referencial (Formulário Compacto) -->
+            <div style="background-color: #FFFFFF; border: 1px solid #999999; padding: 8px; margin-bottom: 12px;">
+                <div style="font-weight: bold; font-size: 11px; margin-bottom: 8px; color: #000000;">Conta Referencial DeRE</div>
+                
+                <!-- Linha 1: Conta Referencial + Código Tributação -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr 80px; gap: 8px; margin-bottom: 8px;">
+                    <div>
+                        <label style="font-size: 10px; font-weight: bold; color: #666666; display: block; margin-bottom: 2px;">Conta Referencial</label>
+                        <select id="conta-ref" style="width: 100%; border: 1px solid #999999; padding: 4px; font-size: 11px; background-color: #FFFFFF;">
+                            <option>Selecione...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="font-size: 10px; font-weight: bold; color: #666666; display: block; margin-bottom: 2px;">Código de Tributação</label>
+                        <select id="codigo-trib" style="width: 100%; border: 1px solid #999999; padding: 4px; font-size: 11px; background-color: #FFFFFF;">
+                            <option>Selecione...</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label style="font-size: 10px; font-weight: bold; color: #666666; display: block; margin-bottom: 2px;">Ind. ISS</label>
+                        <input type="checkbox" id="ind-trib-iss" style="cursor: pointer; margin-top: 6px;">
+                    </div>
+                </div>
+
+                <!-- Linha 2: Datas + Histórico -->
+                <div style="display: grid; grid-template-columns: 1fr 1fr 80px; gap: 8px;">
+                    <div>
+                        <label style="font-size: 10px; font-weight: bold; color: #666666; display: block; margin-bottom: 2px;">Data Início Vigência</label>
+                        <input type="date" id="data-inicio-vigencia" style="width: 100%; border: 1px solid #999999; padding: 4px; font-size: 11px;">
+                    </div>
+                    <div>
+                        <label style="font-size: 10px; font-weight: bold; color: #666666; display: block; margin-bottom: 2px;">Data Fim Vigência</label>
+                        <input type="date" id="data-termino-vigencia" style="width: 100%; border: 1px solid #999999; padding: 4px; font-size: 11px;" onchange="validarDataTermino()">
+                    </div>
+                    <div style="display: flex; align-items: flex-end; justify-content: center;">
+                        <button type="button" style="background-color: #CCCCCC; border: 1px solid #999999; padding: 4px 6px; font-size: 10px; cursor: pointer; border-radius: 2px; width: 100%; height: 26px;" onclick="abrirHistoricoAlteracao()" title="Histórico Alteração">Histórico</button>
+                    </div>
+                </div>
+            </div>
 
             <!-- Seção: Descrição Detalhada + Flag Possui Desmembramento -->
             <div style="display: flex; gap: 16px; align-items: flex-start; margin-bottom: 16px;">
