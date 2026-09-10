@@ -385,37 +385,6 @@
     </style>
 </head>
 <body>
-    <!-- HEADER -->
-    <div class="header">
-        <div class="header-left">
-            <span>Plano de contas específico</span>
-            <div class="header-buttons">
-                <button title="Novo">📄</button>
-                <button title="Abrir">📁</button>
-                <button title="Salvar">💾</button>
-                <button title="Deletar">🗑️</button>
-            </div>
-        </div>
-        <div class="header-right">
-            <div style="display: flex; align-items: center; gap: 8px;">
-                <select class="dropdown-select">
-                    <option hidden>Plano Contas Referencial ▼</option>
-                </select>
-                <select class="dropdown-select" onchange="handlePlanoDeRE(this)">
-                    <option hidden>Plano Referencial DeRE ▼</option>
-                    <option>Associar</option>
-                    <option>Copiar de Outra Empresa</option>
-                </select>
-            </div>
-            <div style="display: flex; gap: 4px; margin-left: 8px;">
-                <button style="background-color: #FFFFFF; border: 1px solid #999999; padding: 2px 8px; cursor: pointer;">◀</button>
-                <button style="background-color: #FFFFFF; border: 1px solid #999999; padding: 2px 8px; cursor: pointer;">◀◀</button>
-                <button style="background-color: #FFFFFF; border: 1px solid #999999; padding: 2px 8px; cursor: pointer;">▶▶</button>
-                <button style="background-color: #FFFFFF; border: 1px solid #999999; padding: 2px 8px; cursor: pointer;">▶</button>
-            </div>
-        </div>
-    </div>
-
     <!-- SEÇÃO FIXA: INFORMAÇÕES DO PLANO DE CONTAS -->
     <div style="background-color: #FFFFFF; border-bottom: 1px solid #999999; padding: 0; font-size: 11px; max-height: calc(75vh - 100px); overflow-y: auto;">
         <table style="width: 100%; border-collapse: collapse;">
@@ -674,6 +643,35 @@
 
     <!-- TAB: DeRE -->
     <div id="dere" class="content">
+        <!-- SEÇÃO: Plano de Contas Específico (Elemento Único) -->
+        <div style="background-color: #E8E8E8; padding: 4px 8px; border: 1px solid #999999; margin-bottom: 12px; display: flex; justify-content: space-between; align-items: center;">
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 11px; font-weight: bold;">Plano de contas específico</span>
+                <div style="display: flex; gap: 4px;">
+                    <button style="background-color: #CCCCCC; border: 1px solid #999999; padding: 2px 6px; font-size: 10px; cursor: pointer;">📄</button>
+                    <button style="background-color: #CCCCCC; border: 1px solid #999999; padding: 2px 6px; font-size: 10px; cursor: pointer;">📁</button>
+                    <button style="background-color: #CCCCCC; border: 1px solid #999999; padding: 2px 6px; font-size: 10px; cursor: pointer;">💾</button>
+                    <button style="background-color: #CCCCCC; border: 1px solid #999999; padding: 2px 6px; font-size: 10px; cursor: pointer;">🗑️</button>
+                </div>
+            </div>
+            <div style="display: flex; align-items: center; gap: 8px;">
+                <select class="dropdown-select" style="font-size: 11px; padding: 4px 6px;">
+                    <option hidden>Plano Contas Referencial ▼</option>
+                </select>
+                <select class="dropdown-select" style="font-size: 11px; padding: 4px 6px;" onchange="handlePlanoDeRE(this)">
+                    <option hidden>Plano Referencial DeRE ▼</option>
+                    <option>Associar</option>
+                    <option>Copiar de Outra Empresa</option>
+                </select>
+                <div style="display: flex; gap: 2px;">
+                    <button style="background-color: #FFFFFF; border: 1px solid #999999; padding: 2px 6px; font-size: 10px; cursor: pointer;">◀</button>
+                    <button style="background-color: #FFFFFF; border: 1px solid #999999; padding: 2px 6px; font-size: 10px; cursor: pointer;">◀◀</button>
+                    <button style="background-color: #FFFFFF; border: 1px solid #999999; padding: 2px 6px; font-size: 10px; cursor: pointer;">▶▶</button>
+                    <button style="background-color: #FFFFFF; border: 1px solid #999999; padding: 2px 6px; font-size: 10px; cursor: pointer;">▶</button>
+                </div>
+            </div>
+        </div>
+
         <div class="form-section">
 
             <!-- Seção: Informações de Conta Referencial (Formulário Compacto) -->
